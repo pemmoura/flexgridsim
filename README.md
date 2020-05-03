@@ -1,5 +1,7 @@
 # Flexgridsim 2.0 #
 
+This software is licensed with GPLv3
+
 ### Changelog ###
 * Space division multiplexing support
 * Bug fixes
