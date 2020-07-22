@@ -15,7 +15,7 @@ Created by Pedro Moura in the Computer Networks Laboratory, Institute Of Computi
 
 ### How do I build it? ###
 
-Recommended building using grade.
+Recommended building using gradle.
 
 Run the command on the root project dir:
 
