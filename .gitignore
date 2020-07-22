@@ -1,6 +1,3 @@
-/bin/
-/plotar
-/plotmbbrnsf
-/plotmbbrusa
-/plotxtnsf
-/plotxtusa
+bin/
+.gradle
+build

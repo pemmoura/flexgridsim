@@ -1,0 +1,16 @@
+apply plugin: 'java'
+
+sourceSets {
+   main {
+      java {
+         srcDir 'src'
+      }
+   }
+}
+
+jar {
+   manifest {
+      attributes "Main-Class": "flexgridsim.Main"
+      attributes "Class-Path": configurations.compile.collect { it.absolutePath }.join(" ")
+   }
+}
