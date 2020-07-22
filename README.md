@@ -13,16 +13,26 @@ It is a simple simulator written in Java that allows the simulation of routing a
 Created by Pedro Moura in the Computer Networks Laboratory, Institute Of Computing, UNICAMP.
 
 
-### How do I get set up? ###
+### How do I build it? ###
 
-Download the source code here.
-Recommended usage of a Java IDE (NetBeans or Eclipse).
-Create a new project based on existing code on NetBeans or Eclipse.
-Build the project to generate a JAR file (may require the definition of the main class "Main.java").
+Recommended building using grade.
+
+Run the command on the root project dir:
+
+```
+gradle build
+```
+
+It will create a flexgridsim.jar file in the build directory.
+You can also use a Java IDE (NetBeans or Eclipse): 
+*Create a new project based on existing code on NetBeans or Eclipse.
+*Build the project to generate a JAR file (may require the definition of the main class "Main.java").
+
+
 
 ### How do I run it ###
 
-Usage: FlexGridSim.jar xml_file number_of_simulations \[-trace] \[-verbose] [minload maxload step]
+Usage: flexgridsim.jar xml_file number_of_simulations \[-trace] \[-verbose] [minload maxload step]
 
 The required parameters are:
 
@@ -34,7 +44,7 @@ Optional parameters:
 * -trace: decides if you want to generate a tracing file. Generating the trace file is not necessary if you plan to gather your simulation statistics directly from your code added to the simulator.
 * -verbose: if you want lots of information about the simulator in the runtime. Only required for debugging purposes.
 
-Example: you@computer:~$ java -jar FlexGridSim.jar rsa.xml 10 100 200 10
+Example: you@computer:~$ java -jar flexgridsim.jar rsa.xml 10 100 200 25
 
 This example will run 10 simulations with different seeds, using the parameters in the rsa.xml file, for each load between 100 and 200 with step 10.
 
@@ -45,9 +55,7 @@ The output graphs are configured in the xml file as with the tag graphs.
 Example:
 
      <graphs>
-
           <graph name="mbbr" dots-file="graph-mbbr.dat"/>
-
      </graphs>
 
 This will output a dat file, that is compatible with gnuplot, with the following sintax:
